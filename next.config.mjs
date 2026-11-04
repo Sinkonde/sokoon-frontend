@@ -3,14 +3,14 @@
 //   /* config options here */
 //   cacheComponents: true,
 //   partialPrefetching: true,
-//   turbopack: {
-//     rules: {
-//       "*.css": {
-//         loaders: ["@tailwindcss/turbopack"],
-//         as: "*.css",
-//       },
-//     },
-//   },
+  // turbopack: {
+  //   rules: {
+  //     "*.css": {
+  //       loaders: ["@tailwindcss/turbopack"],
+  //       as: "*.css",
+  //     },
+  //   },
+  // },
 // };
 
 // export default nextConfig;
@@ -22,6 +22,14 @@ const withNextIntl = createNextIntlPlugin();
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   //reactCompiler: true,
+  turbopack: {
+    rules: {
+      "*.css": {
+        loaders: ["@tailwindcss/turbopack"],
+        as: "*.css",
+      },
+    },
+  }
 };
 
 export default withNextIntl(nextConfig);

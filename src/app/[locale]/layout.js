@@ -4,6 +4,8 @@ import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 
 import { routing } from '../../i18n/routing';
+import QueryProvider from '@/components/providers/query-provider';
+import ThemeProvider from '@/components/providers/theme-provider';
 
 export const metadata = {
   title: 'Duka SaaS',
@@ -24,10 +26,14 @@ export default async function RootLayout({ children, params }) {
   }
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <body className="antialiased">
         <NextIntlClientProvider>
-          {children}
+          <ThemeProvider>
+          <QueryProvider>
+            {children}
+          </QueryProvider>
+          </ThemeProvider>          
         </NextIntlClientProvider>
       </body>
     </html>

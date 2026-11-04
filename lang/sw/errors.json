@@ -1,0 +1,14 @@
+{
+    "badRequest": "Ombi lako halijakubalika. Tafadhali jaribu tena.",
+    "unauthenticated": "Hujaingia kwenye mfumo au session yako imeisha.",
+    "forbidden": "Huna ruhusa ya kufanya kitendo hiki.",
+    "notFound": "Taarifa uliyoitafuta haijapatikana.",
+    "conflict": "Taarifa hizi zinakinzana na zilizopo kwenye mfumo.",
+    "validation": "Tafadhali kagua taarifa ulizoingiza.",
+    "rateLimit": "Umetuma maombi mengi sana. Jaribu tena baadaye.",
+    "serverError": "Hitilafu imetokea kwenye server.",
+    "backendUnavailable": "Server haipatikani kwa sasa. Tafadhali jaribu tena.",
+    "timeout": "Ombi limechukua muda mrefu kujibu.",
+    "network": "Imeshindikana kuwasiliana na server. Hakikisha una internet.",
+    "requestFailed": "Ombi lako halijafanikiwa. Tafadhali jaribu tena."
+  }
