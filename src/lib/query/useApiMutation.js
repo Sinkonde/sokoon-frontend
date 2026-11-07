@@ -2,10 +2,7 @@ import { useMutation } from '@tanstack/react-query';
 
 import apiClient from '@/lib/api/apiClient';
 
-export default function useApiMutation(
-  type,
-  options = {}
-) {
+export default function useApiMutation(type, options = {}) {
 
   return useMutation({
 
@@ -13,13 +10,7 @@ export default function useApiMutation(
 
     mutationFn: async (payload = {}) => {
 
-      const response = await apiClient.post(
-        '',
-        {
-          type,
-          payload,
-        }
-      );
+      const response = await apiClient.post('',{type,payload,});
 
       return response.data;
     },

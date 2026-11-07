@@ -42,7 +42,13 @@ export default function QueryProvider({ children }) {
         return;
       }
 
-      const message = translationRef.current(errorKey);
+      const validationMessage =  error.status === 422
+            ? Object.values(error.errors || {})
+                .flat()
+                .find((item) => typeof item === 'string')
+            : null;
+
+const message = validationMessage || translationRef.current(errorKey);
 
       toast.error(message, {
         id: `api-error-${errorKey}`,

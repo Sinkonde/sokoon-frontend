@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" fill="none">
+  <defs>
+    <linearGradient id="screen" x1="327" y1="176" x2="606" y2="413" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#EDEBFF"/>
+    </linearGradient>
+    <linearGradient id="purple" x1="190" y1="270" x2="720" y2="470" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#927CFF"/>
+      <stop offset=".55" stop-color="#6954E8"/>
+      <stop offset="1" stop-color="#5036C9"/>
+    </linearGradient>
+    <linearGradient id="deepPurple" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#6E58E9"/>
+      <stop offset="1" stop-color="#4933B8"/>
+    </linearGradient>
+    <linearGradient id="bag" x1="120" y1="320" x2="256" y2="487" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A18EFF"/>
+      <stop offset="1" stop-color="#6248D8"/>
+    </linearGradient>
+    <linearGradient id="laptopBase" x1="250" y1="414" x2="669" y2="482" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#DDE2F5"/>
+      <stop offset=".5" stop-color="#AAB4D5"/>
+      <stop offset="1" stop-color="#E6E9F8"/>
+    </linearGradient>
+    <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#B9E7C8"/>
+      <stop offset="1" stop-color="#65B88B"/>
+    </linearGradient>
+    <filter id="shadow" x="78" y="80" width="760" height="450" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="17"/>
+    </filter>
+    <filter id="softShadow" x="0" y="0" width="900" height="560" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <clipPath id="screenClip">
+      <rect x="315" y="164" width="293" height="240" rx="19"/>
+    </clipPath>
+  </defs>
+
+  <!-- subtle grounding shadow -->
+  <ellipse cx="453" cy="478" rx="322" ry="31" fill="#8074D6" opacity=".15" filter="url(#softShadow)"/>
+
+  <!-- background halo -->
+  <circle cx="454" cy="280" r="204" fill="#E8E5FF" opacity=".72"/>
+  <circle cx="454" cy="280" r="157" stroke="#D6D0FF" stroke-width="2" opacity=".65"/>
+  <circle cx="454" cy="280" r="122" stroke="#E0DCFF" stroke-width="2" opacity=".8"/>
+
+  <!-- plant on left -->
+  <path d="M174 426C176 380 169 344 150 310" stroke="#6D9D7D" stroke-width="7" stroke-linecap="round"/>
+  <path d="M166 372C113 365 104 323 119 297C157 303 178 334 166 372Z" fill="url(#leaf)"/>
+  <path d="M170 350C183 298 224 286 247 301C238 340 207 362 170 350Z" fill="#85CDA0"/>
+  <path d="M153 329C119 287 137 253 160 242C190 272 184 307 153 329Z" fill="#A7DDB5"/>
+  <path d="M176 407C198 366 234 366 254 387C235 421 203 430 176 407Z" fill="#73BE91"/>
+  <path d="M117 425H225L212 488H130L117 425Z" fill="#B9B5E9"/>
+  <path d="M117 425H225L218 444H124L117 425Z" fill="#A29AE0"/>
+  <path d="M130 449H212" stroke="#DCD9F7" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+
+  <!-- laptop screen body -->
+  <rect x="298" y="146" width="328" height="278" rx="28" fill="#363D70"/>
+  <rect x="307" y="155" width="310" height="260" rx="22" fill="#6973A5"/>
+  <rect x="315" y="164" width="293" height="240" rx="19" fill="url(#screen)"/>
+
+  <g clip-path="url(#screenClip)">
+    <rect x="315" y="164" width="293" height="33" fill="#5847C8"/>
+    <circle cx="334" cy="180" r="4" fill="#FFFFFF" opacity=".95"/>
+    <circle cx="349" cy="180" r="4" fill="#CFC8FF"/>
+    <circle cx="364" cy="180" r="4" fill="#AFA3FF"/>
+    <rect x="334" y="218" width="88" height="12" rx="6" fill="#DCD8F8"/>
+    <rect x="334" y="240" width="54" height="8" rx="4" fill="#EAE8F8"/>
+    <rect x="334" y="270" width="111" height="105" rx="12" fill="#FFFFFF"/>
+    <rect x="458" y="218" width="128" height="157" rx="12" fill="#FFFFFF"/>
+
+    <!-- sales line chart -->
+    <path d="M348 347L370 325L391 336L414 304L434 314" stroke="#7864E8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M348 356H434" stroke="#E9E7F7" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="414" cy="304" r="5" fill="#7864E8"/>
+
+    <!-- inventory bars -->
+    <rect x="478" y="327" width="17" height="31" rx="5" fill="#C7BFFF"/>
+    <rect x="505" y="306" width="17" height="52" rx="5" fill="#9A88F3"/>
+    <rect x="532" y="278" width="17" height="80" rx="5" fill="#7059E1"/>
+    <rect x="559" y="253" width="17" height="105" rx="5" fill="#5540CA"/>
+    <path d="M478 367H580" stroke="#E8E6F6" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- laptop base -->
+  <path d="M276 425H648L704 462C711 467 707 477 698 477H226C216 477 213 467 221 462L276 425Z" fill="url(#laptopBase)"/>
+  <path d="M276 425H648L681 449H244L276 425Z" fill="#C7CDE6"/>
+  <path d="M385 434H538L552 447H371L385 434Z" fill="#939DC4" opacity=".65"/>
+  <path d="M231 465H692" stroke="#F7F8FF" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+
+  <!-- shopping bag on left foreground -->
+  <path d="M90 346H221L211 472H101L90 346Z" fill="url(#bag)"/>
+  <path d="M119 350V326C119 286 192 286 192 326V350" stroke="#7863E4" stroke-width="13" stroke-linecap="round"/>
+  <path d="M119 350V327C119 301 158 294 177 313" stroke="#C1B6FF" stroke-width="5" stroke-linecap="round"/>
+  <path d="M108 375H204" stroke="#C9BEFF" stroke-width="4" opacity=".75"/>
+  <path d="M139 404H172" stroke="#DED8FF" stroke-width="7" stroke-linecap="round" opacity=".85"/>
+
+  <!-- small parcel on right -->
+  <path d="M675 407L746 389L787 414L715 436L675 407Z" fill="#E7C99F"/>
+  <path d="M675 407V465L715 491V436L675 407Z" fill="#D9B687"/>
+  <path d="M715 436L787 414V467L715 491V436Z" fill="#CDA579"/>
+  <path d="M706 397L746 421L746 478" stroke="#F5E4C7" stroke-width="8" opacity=".8"/>
+  <path d="M746 421L774 412" stroke="#F5E4C7" stroke-width="8" opacity=".8"/>
+
+  <!-- floating analytics card -->
+  <rect x="672" y="103" width="104" height="91" rx="20" fill="#FFFFFF"/>
+  <rect x="672" y="103" width="104" height="91" rx="20" stroke="#E5E0FF" stroke-width="2"/>
+  <path d="M697 164L718 143L735 151L754 124" stroke="#7059E1" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M740 124H754V138" stroke="#7059E1" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- floating verified badge -->
+  <circle cx="743" cy="295" r="28" fill="#E0F5E8"/>
+  <circle cx="743" cy="295" r="20" fill="#67B98A"/>
+  <path d="M733 295L740 302L753 287" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- tiny sparkle accents -->
+  <path d="M263 115L269 130L284 136L269 142L263 157L257 142L242 136L257 130L263 115Z" fill="#A99BFF" opacity=".75"/>
+  <circle cx="720" cy="220" r="5" fill="#9F91F3" opacity=".8"/>
+  <circle cx="274" cy="287" r="4" fill="#B3A8F7" opacity=".8"/>
+</svg>
