@@ -1,0 +1,47 @@
+
+    {
+    "platformManagement": "Usimamizi wa mfumo",
+    "title": "Maduka",
+    "description": "Simamia maduka, usajili wa vifurushi na shughuli za maduka.",
+    "addShop": "Ongeza duka",
+    "stats": {
+      "totalShops": "Jumla ya maduka",
+      "growthThisMonth": "+8.2% mwezi huu",
+      "newShops": "Maduka mapya",
+      "thisMonth": "Mwezi huu",
+      "starterPackage": "Kifurushi cha Starter",
+      "halfOfAllShops": "50% ya maduka yote",
+      "activeShops": "Maduka yanayotumika",
+      "activePercentage": "88.6% yanafanya kazi"
+    },
+    "list": {
+      "allShops": "Maduka yote",
+      "browse": "Angalia na simamia maduka yaliyosajiliwa",
+      "shopCount": "Maduka {count}",
+      "searchPlaceholder": "Tafuta duka, mmiliki au eneo...",
+      "allStatuses": "Hali zote",
+      "allPackages": "Vifurushi vyote",
+      "shop": "Duka",
+      "package": "Kifurushi",
+      "products": "Bidhaa",
+      "status": "Hali",
+      "created": "Tarehe ya kuundwa",
+      "productsCount": "Bidhaa {count}",
+      "noShops": "Hakuna duka lililopatikana",
+      "changeSearch": "Jaribu kubadilisha utafutaji au vichujio.",
+      "showing": "Inaonyesha",
+      "of": "kati ya",
+      "previousPage": "Ukurasa uliotangulia",
+      "nextPage": "Ukurasa unaofuata",
+      "shopDetails": "Maelezo ya {name}",
+      "shopActions": "Vitendo vya {name}"
+    },
+    "status": {
+      "active": "Inatumika",
+      "pending": "Inasubiri",
+      "suspended": "Imesitishwa"
+    },
+    "loading": "Inapakia maduka...",
+    "loadError": "Imeshindikana kupata maduka.",
+    "retry": "Jaribu tena"
+  }

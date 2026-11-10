@@ -1,3 +1,4 @@
+
 'use client';
 
 import {
@@ -7,10 +8,15 @@ import {
 
 import {
   QueryClient,
-  QueryClientProvider,
   QueryCache,
   MutationCache,
 } from '@tanstack/react-query';
+
+import {PersistQueryClientProvider,} from '@tanstack/react-query-persist-client';
+
+import {
+  createAsyncStoragePersister,
+} from '@tanstack/query-async-storage-persister';
 
 import { useTranslations } from 'next-intl';
 
@@ -18,18 +24,18 @@ import { Toaster, toast } from 'sonner';
 import { getApiErrorKey } from '@/lib/api/apiError';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
+import queryStorage from '@/lib/db/query-storage';
+
 export default function QueryProvider({ children }) {
 
   const t = useTranslations('errors');
 
-  // Keep translations updated when language changes
   const translationRef = useRef(t);
 
   translationRef.current = t;
 
   const [queryClient] = useState(() => {
 
-    // Centralized error notification
     const showGlobalError = (error, meta) => {
 
       if (meta?.showGlobalError === false) {
@@ -42,23 +48,23 @@ export default function QueryProvider({ children }) {
         return;
       }
 
-      const validationMessage =  error.status === 422
-            ? Object.values(error.errors || {})
-                .flat()
-                .find((item) => typeof item === 'string')
-            : null;
+      const validationMessage = error.status === 422
+        ? Object.values(error.errors || {})
+            .flat()
+            .find((item) => typeof item === 'string')
+        : null;
 
-const message = validationMessage || translationRef.current(errorKey);
+      const message = validationMessage || translationRef.current(errorKey);
 
       toast.error(message, {
         id: `api-error-${errorKey}`,
         duration: 4500,
       });
+
     };
 
     return new QueryClient({
 
-      // Global query error handling
       queryCache: new QueryCache({
 
         onError: (error, query) => {
@@ -67,15 +73,9 @@ const message = validationMessage || translationRef.current(errorKey);
 
       }),
 
-      // Global mutation error handling
       mutationCache: new MutationCache({
 
-        onError: (
-          error,
-          variables,
-          context,
-          mutation
-        ) => {
+        onError: (error, variables, context, mutation) => {
           showGlobalError(error, mutation.meta);
         },
 
@@ -87,11 +87,13 @@ const message = validationMessage || translationRef.current(errorKey);
 
           staleTime: 30 * 1000,
 
-          gcTime: 5 * 60 * 1000,
+          // Cache itaendelea kuwepo kwenye memory kwa muda mrefu.
+          gcTime: 24 * 60 * 60 * 1000,
+
+          networkMode: 'online',
 
           retry: (failureCount, error) => {
 
-            // Do not retry normal HTTP client errors
             if (
               error.status >= 400 &&
               error.status < 500
@@ -99,7 +101,6 @@ const message = validationMessage || translationRef.current(errorKey);
               return false;
             }
 
-            // Retry server/network errors once
             return failureCount < 1;
           },
 
@@ -110,9 +111,7 @@ const message = validationMessage || translationRef.current(errorKey);
         },
 
         mutations: {
-
           retry: false,
-
         },
 
       },
@@ -121,8 +120,37 @@ const message = validationMessage || translationRef.current(errorKey);
 
   });
 
+  const [persister] = useState(() => {
+
+    return createAsyncStoragePersister({
+
+      storage: queryStorage,
+
+      key: 'SHOPLINK_QUERY_CACHE',
+
+      throttleTime: 1000,
+
+    });
+
+  });
+
   return (
-    <QueryClientProvider client={queryClient}>
+
+    <PersistQueryClientProvider
+
+      client={queryClient}
+
+      persistOptions={{
+
+        persister,
+
+        maxAge: 7 * 24 * 60 * 60 * 1000,
+
+        buster: 'shoplink-cache-v1',
+
+      }}
+
+    >
 
       {children}
 
@@ -137,6 +165,8 @@ const message = validationMessage || translationRef.current(errorKey);
         <ReactQueryDevtools initialIsOpen={false} />
       )}
 
-    </QueryClientProvider>
+    </PersistQueryClientProvider>
+
   );
+
 }

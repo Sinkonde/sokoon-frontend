@@ -1,0 +1,46 @@
+{
+    "platformManagement": "Platform management",
+    "title": "Shops",
+    "description": "Manage stores, subscriptions, and shop activity.",
+    "addShop": "Add shop",
+    "stats": {
+      "totalShops": "Total shops",
+      "growthThisMonth": "+8.2% this month",
+      "newShops": "New shops",
+      "thisMonth": "This month",
+      "starterPackage": "Starter package",
+      "halfOfAllShops": "50% of all shops",
+      "activeShops": "Active shops",
+      "activePercentage": "88.6% active"
+    },
+    "list": {
+      "allShops": "All shops",
+      "browse": "Browse and manage registered shops",
+      "shopCount": "{count} shops",
+      "searchPlaceholder": "Search shop, owner, location...",
+      "allStatuses": "All statuses",
+      "allPackages": "All packages",
+      "shop": "Shop",
+      "package": "Package",
+      "products": "Products",
+      "status": "Status",
+      "created": "Created",
+      "productsCount": "{count} products",
+      "noShops": "No shops found",
+      "changeSearch": "Try changing your search or filters.",
+      "showing": "Showing",
+      "of": "of",
+      "previousPage": "Previous page",
+      "nextPage": "Next page",
+      "shopDetails": "Details for {name}",
+      "shopActions": "Actions for {name}"
+    },
+    "status": {
+      "active": "Active",
+      "pending": "Pending",
+      "suspended": "Suspended"
+    },
+    "loading": "Loading shops...",
+    "loadError": "Failed to load shops.",
+    "retry": "Try again"
+  }

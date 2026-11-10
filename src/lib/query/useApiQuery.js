@@ -2,35 +2,27 @@ import { useQuery } from '@tanstack/react-query';
 
 import apiClient from '@/lib/api/apiClient';
 
-export default function useApiQuery(
-  type,
-  payload = {},
-  options = {}
-) {
-
-  const { queryKey, ...queryOptions } = options;
+export default function useApiQuery(type, payload = {}, options = {}) {
 
   return useQuery({
 
-    ...queryOptions,
+    ...options,
 
-    queryKey: queryKey ?? ['api', type, payload],
+    queryKey: options.queryKey ?? [type, payload],
 
-    queryFn: async ({ signal }) => {
+    queryFn: async () => {
 
-      const response = await apiClient.post(
-        '',
-        {
-          type,
-          payload,
-        },
-        {
-          signal,
-        }
-      );
+      const response = await apiClient.post('', {
+        type,
+        payload,
+      });
+
+      console.log("FETCHING", type, payload)
 
       return response.data;
+
     },
 
   });
+
 }

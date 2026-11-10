@@ -1,0 +1,28 @@
+{
+      "profile": "WASIFU WA DUKA",
+      "close": "Funga",
+      "shopDetails": "Maelezo ya duka",
+      "products": "Bidhaa",
+      "totalProducts": "Jumla ya bidhaa",
+      "subscription": "Usajili wa kifurushi",
+      "currentPackage": "Kifurushi cha sasa",
+      "basicInformation": "Taarifa za msingi",
+      "importantInformation": "Taarifa muhimu kuhusu duka hili",
+      "details": "TAARIFA",
+      "owner": "Mmiliki wa duka",
+      "phone": "Namba ya simu",
+      "location": "Mahali lilipo",
+      "registrationDate": "Tarehe ya usajili",
+      "onlineStore": "Duka la mtandaoni",
+      "onlineStoreDescription": "Anwani ya duka kwenye mtandao",
+      "subdomain": "Subdomain",
+      "notSet": "Haijawekwa",
+      "paymentInformationPending": "Taarifa za malipo zitaunganishwa",
+      "package": "Kifurushi",
+      "status": {
+        "active": "Linafanya kazi",
+        "inactive": "Halifanyi kazi"
+      },
+      "openShop": "Fungua duka",
+      "closeDetails": "Funga maelezo ya duka"
+    }

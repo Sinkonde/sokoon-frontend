@@ -1,0 +1,28 @@
+{
+      "profile": "SHOP PROFILE",
+      "close": "Close",
+      "shopDetails": "Shop details",
+      "products": "Products",
+      "totalProducts": "Total products",
+      "subscription": "Package subscription",
+      "currentPackage": "Current package",
+      "basicInformation": "Basic information",
+      "importantInformation": "Important information about this shop",
+      "details": "DETAILS",
+      "owner": "Shop owner",
+      "phone": "Phone number",
+      "location": "Location",
+      "registrationDate": "Registration date",
+      "onlineStore": "Online store",
+      "onlineStoreDescription": "Shop's online address",
+      "subdomain": "Subdomain",
+      "notSet": "Not set",
+      "paymentInformationPending": "Payment information will be integrated",
+      "package": "Package",
+      "status": {
+        "active": "Active",
+        "inactive": "Inactive"
+      },
+      "openShop": "Open shop",
+      "closeDetails": "Close shop details"
+    }
