@@ -28,7 +28,7 @@ export default function ShopsTable({ shops, onSelectShop }) {
                   <div className="min-w-0">
                     <p className="truncate text-sm font-semibold">{shop.name}</p>
                     <p className="mt-0.5 truncate text-xs text-slate-500">
-                      {shop.owner} · {shop.id}
+                      {shop.owner} · {`SHP-${shop.id}`}
                     </p>
                   </div>
                 </div>
